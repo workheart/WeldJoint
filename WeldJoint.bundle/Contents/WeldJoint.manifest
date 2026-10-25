@@ -1,0 +1,14 @@
+{
+	"autodeskProduct": "Fusion360",
+	"type": "addin",
+	"id": "1d8ac2ed-47dd-4f6e-9fb7-1507fef7adaa",
+	"author": "Kabelfrikkler",
+	"description": {
+		"": "Weld tabs and finger joints for laser or waterjet cut plates. Based on Box Joint by Mark Suska.",
+		"1031": "Schweiß-Tabs und Fingerverbindungen für laser- oder wasserstrahlgeschnittene Bleche. Basiert auf Box Joint von Mark Suska."
+	},
+	"version": "1.0.0",
+	"runOnStartup": true,
+	"supportedOS": "windows|mac",
+	"editEnabled":	true
+}

@@ -1,0 +1,21 @@
+Tooltip-Bilder (Tool Clips) für den Weld-Joint-Dialog
+
+Hier ein PNG pro Dialogfeld ablegen, Dateiname = ID des Feldes. Fehlt ein Bild, wird nur der Text-Tooltip
+gezeigt. Tooltips sind in Fusion max. 300 px breit, also Bilder höchstens 300 px breit
+(z. B. 300 x 200 px). Nach dem Ablegen das Add-in stoppen und neu starten.
+
+command.png ......... Button "Weld Joint" in der Werkzeugleiste
+faces.png ........... Faces
+mode.png ............ Mode
+tabPoints.png ....... Tab Points
+minFingers.png ...... Min Fingers
+maxFingers.png ...... Max Fingers
+minFingerWidth.png .. Min Finger Width
+maxFingerWidth.png .. Max Finger Width
+fingerRatio.png ..... Finger Ratio
+tabWidth.png ........ Tab Width
+tabSpacing.png ...... Tab Spacing
+margin.png .......... Corner Margin
+tabSetback.png ...... Tab Setback
+slotClearance.png ... Slot Clearance
+holeClearance.png ... Hole Clearance

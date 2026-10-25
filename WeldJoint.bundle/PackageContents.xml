@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage SchemaVersion="1.0"
+	ProductType="Application"
+
+	AutodeskProduct="Fusion360"
+	Name="Weld Joint"
+	Description="Add-In for creating weld tabs and finger joints for laser or waterjet cut plates. Based on Box Joint by Mark Suska."
+	AppVersion="1.0.0"
+	Author="Kabelfrikkler"
+	AppNameSpace="com.kabelfrikkler.WeldJoint"
+	HelpFile="./Contents/docs/Help.html"
+	OnlineDocumentation="https://github.com/workheart"
+
+	ProductCode="*"
+	UpgradeCode="{2DEC9A62-F787-4D4F-B82C-80B82B99832C}" >
+
+	<CompanyDetails Name="Kabelfrikkler"
+		Phone=" "
+		Url="https://github.com/workheart"
+		Email=" " />
+
+		<RuntimeRequirements SupportPath="./Contents/docs" OS="win64|macOS" Platform="Fusion360" SeriesMin=""  />
+
+	<Components>
+		<RuntimeRequirements SupportPath="./Contents/docs" OS="win64|macOS" Platform="Fusion360" SeriesMin="" />
+		    <ComponentEntry AppName="Weld Joint" Version="1.0.0" ModuleName="./Contents/WeldJoint.manifest" AppDescription="Add-In for creating weld tabs and finger joints for laser or waterjet cut plates." />
+	</Components>
+
+</ApplicationPackage>

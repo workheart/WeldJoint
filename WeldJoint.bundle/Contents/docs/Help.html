@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weld Joint Help</title>
+<style>
+	:root { --text: #222; --muted: #666; --line: #ddd; --bg: #fff; --accent: #0a6ebd; }
+	@media (prefers-color-scheme: dark) {
+		:root { --text: #e6e6e6; --muted: #a0a0a0; --line: #444; --bg: #1e1e1e; --accent: #5ab0f0; }
+	}
+	body { font-family: "Segoe UI", Arial, sans-serif; color: var(--text); background: var(--bg);
+		max-width: 46em; margin: 0 auto; padding: 1.5em 1em; line-height: 1.5; }
+	h1 { margin-bottom: 0; }
+	.byline { color: var(--muted); margin-top: .2em; }
+	h2 { border-bottom: 1px solid var(--line); padding-bottom: .2em; margin-top: 1.6em; }
+	a { color: var(--accent); }
+	table { border-collapse: collapse; width: 100%; }
+	th, td { text-align: left; vertical-align: top; padding: .35em .6em; border-bottom: 1px solid var(--line); }
+	th { white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<h1>Weld Joint</h1>
+<p class="byline">By <a href="https://github.com/workheart" target="_blank">Kabelfrikkler</a>.
+Based on <a href="https://github.com/EvilHacker/BoxJoint" target="_blank">Box Joint</a> by Mark Suska (MIT License).</p>
+
+<p>Creates weld tabs and finger joints between plates that are cut by laser or waterjet and then welded.
+The joint is a single, editable feature in the timeline.</p>
+
+<h2>Usage</h2>
+<ol>
+	<li>Model the plates with simple butt joints: plates touch each other with a planar face.</li>
+	<li>Open <b>Weld Joint</b> (DESIGN workspace, SOLID tab, MODIFY panel).</li>
+	<li>Select the <b>outside face</b> of each plate to join.</li>
+	<li>Choose the <b>Mode</b> and set the values, then click <b>OK</b>.</li>
+</ol>
+<p>A joint is created wherever a selected plate butts against another selected plate, at any angle.
+The butting plate gets the tabs, the other plate gets the slots. Material thickness is measured from the plates.</p>
+<p>To change a joint, select it in the timeline and choose <b>Edit Feature</b>.
+The dialog remembers the last used settings, also across documents.</p>
+
+<h2>Modes</h2>
+<table>
+	<tr><th>Fingers</th><td>Alternating fingers along the whole edge.</td></tr>
+	<tr><th>Tabs: Spacing</th><td>Tabs of a fixed width, spread evenly. All gaps, also those to the ends of the edge,
+		are equal and never larger than <i>Tab Spacing</i>.</td></tr>
+	<tr><th>Tabs: Points</th><td>One tab at each selected sketch point, centered along the edge. Draw the points in a
+		sketch on an outside face, on the edge or within the plate thickness. Dimension them in the sketch:
+		the tabs follow when the sketch changes.</td></tr>
+</table>
+
+<h2>Inputs</h2>
+<table>
+	<tr><th>Faces</th><td>Outside faces of the plates to join.</td></tr>
+	<tr><th>Mode</th><td>See above.</td></tr>
+	<tr><th>Tab Points</th><td>Sketch or construction points that place the tabs (mode <i>Tabs: Points</i>).</td></tr>
+	<tr><th>Min / Max Fingers</th><td>Number of fingers of both plates together (odd).</td></tr>
+	<tr><th>Min / Max Finger Width</th><td>Allowed finger width.</td></tr>
+	<tr><th>Finger Ratio</th><td>Width share of the fingers on the butting plate. 0.5 makes all fingers equally wide.</td></tr>
+	<tr><th>Tab Width</th><td>Width of each tab along the edge.</td></tr>
+	<tr><th>Tab Spacing</th><td>Largest gap between two tabs.</td></tr>
+	<tr><th>Corner Margin</th><td>Moves all fingers or tabs inward by this distance, from both ends of the edge.</td></tr>
+	<tr><th>Tab Setback</th><td>The tabs end this far below the outside face of the other plate, which leaves room for the weld.</td></tr>
+	<tr><th>Slot Clearance</th><td>Play along the edge, per side: each slot is longer than its tab by this value on both sides.</td></tr>
+	<tr><th>Hole Clearance</th><td>Play across the edge, per side: each slot is wider than the plate thickness by this value
+		on both sides. Only for closed holes inside a face, not for notches at a corner.</td></tr>
+</table>
+
+<h2>Installation / Uninstallation</h2>
+<p>Install: copy the folder <code>WeldJoint.bundle</code> to <code>%appdata%\Autodesk\ApplicationPlugins</code> (Windows)
+or <code>~/Library/Application Support/Autodesk/ApplicationPlugins</code> (macOS) and start Fusion.</p>
+<p>Uninstall: close Fusion and delete the folder. To stop the Add-In without uninstalling it, use
+UTILITIES &gt; Scripts and Add-Ins.</p>
+
+<h2>Support</h2>
+<p><a href="https://github.com/workheart" target="_blank">https://github.com/workheart</a></p>
+
+</body>
+</html>
